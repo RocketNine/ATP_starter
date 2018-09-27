@@ -1,6 +1,6 @@
-package test.java;
 
-import main.java.*;
+
+import org.junit.Assert;
 import org.junit.Test;
 
 import javax.swing.event.ChangeListener;
@@ -22,5 +22,6 @@ public class SpaceportDepartureBoardTest {
         // 4. Exercise the SUT
 
         // 5. Verify the results are sorted correctly
+        Assert.fail();
     }
 }
