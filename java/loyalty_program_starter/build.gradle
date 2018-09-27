@@ -1,0 +1,26 @@
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: "idea"
+
+project.ext {
+    junitVersion = '5.1.0'
+//    junitVersion = '4.12'
+    cucumberVersion = '3.0.2'
+}
+
+dependencies {
+    testCompile 'org.junit.jupiter:junit-jupiter-api:' + junitVersion
+    testCompile 'io.cucumber:cucumber-java8:' + cucumberVersion
+    testCompile 'io.cucumber:cucumber-junit:' + cucumberVersion
+}
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    testLogging {
+        exceptionFormat = 'full'
+        events = ["passed", "failed", "skipped"]
+    }
+}
