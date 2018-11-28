@@ -6,9 +6,9 @@ namespace csharp
     public class SpaceportDepartureBoardTest
     {
         
-        //TODO - Use the Stub Recipe to create a LaunchInfoProviderStub
+        //TODO - Use the Stub Recipe to test that launches are sorted correctly
         [Test]
-        public void HowDoWeTestThisThing()
+        public void LaunchesAreSortedByDestination_DestinationsAreUnique()
         {
             // 1. Create LaunchInfoProviderStub (that implements ISpacelineLaunchInfoProvider)
 
@@ -17,7 +17,7 @@ namespace csharp
             // 4. Exercise the SUT
 
             // 5. Verify the results are sorted correctly
-            Assert.Fail("Uh oh");
+            Assert.Fail("TODO - test the launch info sorting behavior");
         }
     }
 }
