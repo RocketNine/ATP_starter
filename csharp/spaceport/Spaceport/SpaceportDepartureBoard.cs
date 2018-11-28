@@ -5,7 +5,7 @@ namespace csharp
 {
     public class SpaceportDepartureBoard : IObserver<LaunchInfo>
     {
-        private ISpacelineLaunchInfoProvider provider;
+        private ISpacelineLaunchInfoProvider _provider;
         
         public List<LaunchInfo> LaunchList { get; }
 
@@ -13,9 +13,9 @@ namespace csharp
         
         public SpaceportDepartureBoard(ISpacelineLaunchInfoProvider provider)
         {
-            this.provider = provider;
-            LaunchList = provider.GetCurrentLaunches();
-            provider.Subscribe(this);
+            _provider  = provider;
+            LaunchList = _provider.GetCurrentLaunches();
+            _provider.Subscribe(this);
             running = true;
         }
 
