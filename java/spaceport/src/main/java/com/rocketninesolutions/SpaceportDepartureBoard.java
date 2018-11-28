@@ -1,5 +1,6 @@
 package com.rocketninesolutions;
 
+import java.util.Collections;
 import java.util.List;
 
 public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
@@ -13,6 +14,10 @@ public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
         launchList = provider.getCurrentLaunches();
         provider.addListener(this);
         running = true;
+    }
+
+    public List<LaunchInfo> getLaunchList() {
+        return Collections.unmodifiableList(launchList);
     }
 
     @Override
