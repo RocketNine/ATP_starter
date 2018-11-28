@@ -15,6 +15,7 @@ namespace csharp
         {
             _provider  = provider;
             LaunchList = _provider.GetCurrentLaunches();
+            SortLaunches();
             _provider.Subscribe(this);
             running = true;
         }
@@ -32,7 +33,11 @@ namespace csharp
             {
                 AddNewLaunch(info);
             }
-       }
+        }
+
+        private void SortLaunches() {
+            throw new NotImplementedException("sorting logic hasn't been implemented yet");
+        }
 
         private void AddNewLaunch(LaunchInfo info)
         {

@@ -1,5 +1,7 @@
 package com.rocketninesolutions;
 
+import jdk.jshell.spi.ExecutionControl;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -12,6 +14,7 @@ public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
     public SpaceportDepartureBoard(ISpacelineLaunchInfoProvider provider) {
         this.provider = provider;
         launchList = provider.getCurrentLaunches();
+        sortLaunches();
         provider.addListener(this);
         running = true;
     }
@@ -33,6 +36,10 @@ public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
         } else {
             addNewLaunch(launchInfo);
         }
+    }
+
+    private void sortLaunches() {
+        throw new UnsupportedOperationException("sorting logic hasn't been implemented yet");
     }
 
     private void addNewLaunch(LaunchInfo launchInfo) {
