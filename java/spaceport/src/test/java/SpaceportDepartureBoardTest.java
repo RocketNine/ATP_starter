@@ -22,6 +22,6 @@ public class SpaceportDepartureBoardTest {
         // 4. Exercise the SUT
 
         // 5. Verify the results are sorted correctly
-        Assert.fail();
+        Assert.fail("TODO - implement this test");
     }
 }
