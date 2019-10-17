@@ -10,12 +10,12 @@ public class GildedRoseTest {
     public void this_test_needs_a_better_name() {
         // Arrange
         Item[] items = new Item[] { new Item("foo", 0, 0) };
-        GildedRose app = new GildedRose(items);
+        GildedRose sut = new GildedRose(items);
 
         // Act
-        app.updateQuality();
+        sut.updateQuality();
 
         // Assert
-        assertEquals("fixme", app.items[0].name);
+        assertEquals("fixme", sut.items[0].name);
     }
 }
