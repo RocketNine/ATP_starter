@@ -1,7 +1,9 @@
 package com.rocketninesolutions;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class SpaceportDepartureBoardTest {
 
@@ -15,6 +17,6 @@ public class SpaceportDepartureBoardTest {
         // 4. Exercise the SUT
 
         // 5. Verify the results are sorted correctly
-        Assert.fail("TODO - test the launch info sorting behavior");
+        fail("TODO - test the launch info sorting behavior");
     }
 }
