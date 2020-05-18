@@ -5,8 +5,16 @@ from gilded_rose import Item, GildedRose
 
 
 class GildedRoseTest(unittest.TestCase):
-    def test_how_do_we_test_this_thing(self):
-        self.fail("Hooray! A failing test means our tests are running!")
+    def test_needs_a_better_name(self):
+        # Arrange
+        items = [Item("foo", 0, 0)]
+        gilded_rose = GildedRose(items)
+
+        # Act
+        gilded_rose.update_quality()
+
+        # Assert
+        self.assertEquals("fixme", items[0].name)
 
 
 if __name__ == '__main__':
