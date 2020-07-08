@@ -1,6 +1,8 @@
-apply plugin: "java"
-apply plugin: "eclipse"
-apply plugin: "idea"
+plugins {
+    id 'java'
+    id 'idea'
+    id 'eclipse'
+}
 
 project.ext {
     junitVersion = '5.6.2'
@@ -23,3 +25,23 @@ test {
         events = ["passed", "failed", "skipped"]
     }
 }
+
+
+
+//
+//project.ext {
+//    cucumberVersion = '3.0.2'
+//}
+//
+//dependencies {
+//    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.6.2'
+//    testCompile 'io.cucumber:cucumber-java8:' + cucumberVersion
+//    testCompile 'io.cucumber:cucumber-junit:' + cucumberVersion
+//}
+//
+//test {
+//    useJUnitPlatform()
+//    testLogging {
+//        events "passed", "skipped", "failed"
+//    }
+
