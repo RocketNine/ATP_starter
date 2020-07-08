@@ -3,8 +3,7 @@ apply plugin: "eclipse"
 apply plugin: "idea"
 
 project.ext {
-    junitVersion = '5.1.0'
-//    junitVersion = '4.12'
+    junitVersion = '5.6.2'
     cucumberVersion = '3.0.2'
 }
 
