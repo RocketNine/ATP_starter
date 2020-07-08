@@ -15,30 +15,13 @@ dependencies {
     testCompile 'io.cucumber:cucumber-junit:' + cucumberVersion
 }
 
-
-
 repositories {
     mavenCentral()
 }
 
 test {
+    useJUnitPlatform()
     testLogging {
-        exceptionFormat = 'full'
-        events = ["passed", "failed", "skipped"]
+        events "passed", "skipped", "failed"
     }
 }
-
-
-
-//
-//project.ext {
-//    cucumberVersion = '3.0.2'
-//}
-//
-//
-//test {
-//    useJUnitPlatform()
-//    testLogging {
-//        events "passed", "skipped", "failed"
-//    }
-
