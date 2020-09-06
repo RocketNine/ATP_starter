@@ -2,7 +2,11 @@ package com.rocketninesolutions;
 
 import jdk.jshell.spi.ExecutionControl;
 
+import java.time.LocalDateTime;
+import java.time.temporal.TemporalUnit;
 import java.util.Collections;
+import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
@@ -56,6 +60,22 @@ public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
 
     private void handleLaunched(LaunchInfo launchInfo) {
         throw new UnsupportedOperationException("launched launches are not supported");
+    }
+
+    protected void removeInactiveLaunches() {
+        LocalDateTime now = LocalDateTime.now();
+
+        Iterator<LaunchInfo> iter = launchList.iterator();
+        while (iter.hasNext()) {
+            LaunchInfo l = iter.next();
+            if (LaunchInfo.LaunchStatus.Launched == l.getStatus() &&
+                    l.getTime().plusMinutes(5).compareTo(now) > 0) {
+                iter.remove();
+            } else if (LaunchInfo.LaunchStatus.Scrubbed == l.getStatus() &&
+                    l.getTime().plusMinutes(10).compareTo(now) > 0) {
+                iter.remove();
+            }
+        }
     }
 
     public void shutDown() {
