@@ -39,7 +39,8 @@ public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
     }
 
     private void sortLaunches() {
-        throw new UnsupportedOperationException("sorting logic hasn't been implemented yet");
+        // Skipped this to verify remove logic
+
     }
 
     private void addNewLaunch(LaunchInfo launchInfo) {
@@ -65,10 +66,10 @@ public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
         while (iter.hasNext()) {
             LaunchInfo l = iter.next();
             if (LaunchInfo.LaunchStatus.Launched == l.getStatus() &&
-                    l.getTime().plusMinutes(5).compareTo(now) > 0) {
+                    l.getTime().plusMinutes(5).compareTo(now) < 0) {
                 iter.remove();
             } else if (LaunchInfo.LaunchStatus.Scrubbed == l.getStatus() &&
-                    l.getTime().plusMinutes(10).compareTo(now) > 0) {
+                    l.getTime().plusMinutes(10).compareTo(now) < 0) {
                 iter.remove();
             }
         }
