@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
+public class SpaceportDepartureBoard {
 
     private ISpacelineLaunchInfoProvider provider;
     private List<LaunchInfo> launchList;
@@ -15,7 +15,7 @@ public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
         this.provider = provider;
         launchList = provider.getCurrentLaunches();
         sortLaunches();
-        provider.addListener(this);
+
         running = true;
     }
 
@@ -23,7 +23,6 @@ public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
         return Collections.unmodifiableList(launchList);
     }
 
-    @Override
     public void onLaunchInfoChanged(LaunchInfo launchInfo) {
         LaunchInfo.LaunchStatus status = launchInfo.getStatus();
 
