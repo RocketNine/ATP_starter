@@ -1,14 +1,15 @@
 package project;
 
+import org.junit.jupiter.api.Test;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class LoyaltyProgramTest {
 
     @Test
     public void TestSuiteWorking() {
-        Assert.assertTrue("JUnit test suite is working", true);
+        assertTrue(true, "JUnit test suite is working");
     }
 
 }

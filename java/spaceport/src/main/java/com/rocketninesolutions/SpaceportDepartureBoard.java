@@ -1,11 +1,11 @@
 package com.rocketninesolutions;
 
-import jdk.jshell.spi.ExecutionControl;
-
+import java.time.LocalDateTime;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
-public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
+public class SpaceportDepartureBoard {
 
     private ISpacelineLaunchInfoProvider provider;
     private List<LaunchInfo> launchList;
@@ -15,7 +15,7 @@ public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
         this.provider = provider;
         launchList = provider.getCurrentLaunches();
         sortLaunches();
-        provider.addListener(this);
+
         running = true;
     }
 
@@ -23,7 +23,6 @@ public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
         return Collections.unmodifiableList(launchList);
     }
 
-    @Override
     public void onLaunchInfoChanged(LaunchInfo launchInfo) {
         LaunchInfo.LaunchStatus status = launchInfo.getStatus();
 
@@ -39,7 +38,8 @@ public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
     }
 
     private void sortLaunches() {
-        throw new UnsupportedOperationException("sorting logic hasn't been implemented yet");
+        // Skipped this to verify remove logic
+
     }
 
     private void addNewLaunch(LaunchInfo launchInfo) {
@@ -56,6 +56,22 @@ public class SpaceportDepartureBoard implements LaunchInfoChangedListener {
 
     private void handleLaunched(LaunchInfo launchInfo) {
         throw new UnsupportedOperationException("launched launches are not supported");
+    }
+
+    protected void removeInactiveLaunches() {
+        LocalDateTime now = LocalDateTime.now();
+
+        Iterator<LaunchInfo> iter = launchList.iterator();
+        while (iter.hasNext()) {
+            LaunchInfo l = iter.next();
+            if (LaunchInfo.LaunchStatus.Launched == l.getStatus() &&
+                    l.getTime().plusMinutes(5).compareTo(now) < 0) {
+                iter.remove();
+            } else if (LaunchInfo.LaunchStatus.Scrubbed == l.getStatus() &&
+                    l.getTime().plusMinutes(10).compareTo(now) < 0) {
+                iter.remove();
+            }
+        }
     }
 
     public void shutDown() {

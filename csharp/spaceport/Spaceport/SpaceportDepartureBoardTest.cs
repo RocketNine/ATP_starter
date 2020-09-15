@@ -10,13 +10,13 @@ namespace csharp
         [Test]
         public void LaunchesAreSortedByDestination_DestinationsAreUnique()
         {
-            // 1. Create LaunchInfoProviderStub (that implements ISpacelineLaunchInfoProvider)
+            // Step 1. Create LaunchInfoProviderStub (that implements ISpacelineLaunchInfoProvider)
 
-            // 2/3. Create SUT - SpaceportDepartureBoard, using Constructor Injection
+            // Step 2 & 3. Create SUT - SpaceportDepartureBoard, using Constructor Injection
 
-            // 4. Exercise the SUT
+            // Step 4. Exercise the SUT
 
-            // 5. Verify the results are sorted correctly
+            // Step 5. Verify the results are sorted correctly
             Assert.Fail("TODO - test the launch info sorting behavior");
         }
     }
