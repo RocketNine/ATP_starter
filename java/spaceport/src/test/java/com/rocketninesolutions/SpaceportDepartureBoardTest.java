@@ -10,7 +10,7 @@ public class SpaceportDepartureBoardTest {
     public void LaunchesAre_SortedByDestination_DestinationsAreUnique() {
         // Step 1. Create LaunchInfoProviderStub (that implements ISpacelineLaunchInfoProvider)
 
-        // Step 2 & 3. Create SUT - SpaceportDepartureBoard, using Constuctor Injection
+        // Step 2 & 3. Create SUT - SpaceportDepartureBoard, using Constructor Injection
 
         // Step 4. Exercise the SUT
 
