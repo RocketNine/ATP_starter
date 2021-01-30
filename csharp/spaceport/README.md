@@ -16,7 +16,7 @@ Occasionally launches are scrubbed. The Departures Board is notified of the new 
 
     public class LaunchInfo {
 
-        private UUID launchID;
+        private Guid launchID;
         private String destination;
         private String flightNumber;
         private LocalDateTime time;
