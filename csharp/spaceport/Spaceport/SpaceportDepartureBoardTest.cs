@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace csharp
+namespace SpacePort
 {
     [TestFixture]
     public class SpaceportDepartureBoardTest
@@ -12,9 +12,7 @@ namespace csharp
         {
             // Step 1. Create LaunchInfoProviderStub (that implements ISpacelineLaunchInfoProvider)
 
-            // Step 2 & 3. Create SUT - SpaceportDepartureBoard, using Constructor Injection
-
-            // Step 4. Exercise the SUT
+            // Step 2 & 3 & 4. Create SUT - SpaceportDepartureBoard, using Constructor Injection, Exercise the SUT
 
             // Step 5. Verify the results are sorted correctly
             Assert.Fail("TODO - test the launch info sorting behavior");

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace csharp
+namespace SpacePort
 {
     public interface ISpacelineLaunchInfoProvider : IObservable<LaunchInfo>
     {

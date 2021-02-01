@@ -2,7 +2,7 @@
 using NUnit.Framework;
 
 
-namespace csharp
+namespace GildedRose
 {
     [TestFixture]
     public class GildedRoseTest
@@ -11,14 +11,14 @@ namespace csharp
         public void this_test_needs_a_better_name()
         {
             // Arrange
-            IList<Item> Items = new List<Item> { new Item { Name = "foo", SellIn = 0, Quality = 0 } };
-            GildedRose sut = new GildedRose(Items);
+            IList<Item> items = new List<Item> { new Item { Name = "foo", SellIn = 0, Quality = 0 } };
+            GildedRose sut = new GildedRose(items);
             
             // Act
             sut.UpdateQuality();
             
             // Assert
-            Assert.AreEqual("fixme", Items[0].Name);
+            Assert.AreEqual("fixme", items[0].Name);
         }
     }
 }

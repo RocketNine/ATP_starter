@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace csharp
+namespace SpacePort
 {
     public class SpaceportDepartureBoard : IObserver<LaunchInfo>
     {
-        private ISpacelineLaunchInfoProvider _provider;
+        private readonly ISpacelineLaunchInfoProvider _provider;
         
         public List<LaunchInfo> LaunchList { get; }
 
-        private Boolean running;
+        private Boolean _running;
         
         public SpaceportDepartureBoard(ISpacelineLaunchInfoProvider provider)
         {
@@ -17,7 +17,7 @@ namespace csharp
             LaunchList = _provider.GetCurrentLaunches();
             SortLaunches();
             _provider.Subscribe(this);
-            running = true;
+            _running = true;
         }
 
         public void OnNext(LaunchInfo info)
@@ -66,7 +66,7 @@ namespace csharp
 
         public void ShutDown()
         {
-            running = false;
+            _running = false;
         }        
     }
 }

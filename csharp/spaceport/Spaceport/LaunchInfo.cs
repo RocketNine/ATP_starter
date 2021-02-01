@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace csharp
+namespace SpacePort
 {
     public class LaunchInfo
     {
