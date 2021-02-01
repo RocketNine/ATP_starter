@@ -1,14 +1,14 @@
 ﻿using NUnit.Framework;
 
-namespace csharp
+namespace FizzBuzz
 {
     [TestFixture]
-    public class FizzbuzzTest
+    public class FizzBuzzTest
     {
         [Test]
         public void HowDoWeTestThisThing()
         {
-            Assert.Fail("Uh oh");
+            Assert.Fail("Hooray! A failing test means our system is working!");
         }
     }
 }
