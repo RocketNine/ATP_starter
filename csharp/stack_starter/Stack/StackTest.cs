@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace csharp
+namespace Stack
 {
     [TestFixture]
     public class StackTest
@@ -8,7 +8,7 @@ namespace csharp
         [Test]
         public void HowDoWeTestThisThing()
         {
-            Assert.Fail("Uh oh");
+            Assert.Fail("Hooray! A failing test means our system is working!");
         }
     }
 }
