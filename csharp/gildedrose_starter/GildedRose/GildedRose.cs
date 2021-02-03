@@ -5,9 +5,11 @@ namespace GildedRose
     public class GildedRose
     {
         private readonly IList<Item> _items;
+        public IList<Item> Items => _items;
+
         public GildedRose(IList<Item> items)
         {
-            this._items = items;
+            _items = items;
         }
 
         public void UpdateQuality()
