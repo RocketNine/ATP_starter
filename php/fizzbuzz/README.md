@@ -20,3 +20,8 @@ Examples:
 
 - PHP language level 7.1
 - PHPUnit 9.5.2
+
+Run the unit tests with the command:
+```
+phpunit tests/FizzBuzzTest.php
+```
