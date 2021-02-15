@@ -1,7 +1,14 @@
+#java
 build/
 .gradle/
 
-.idea/
 out/
 
+#php
+.phpunit.result.cache
+
+#python
 *.pyc
+
+#JetBrains IDE
+.idea/
