@@ -15,6 +15,13 @@ The Stack supports the following operations:
 - PHP language level 7.1
 - PHPUnit 9.5.2
 
+Install project dependencies with the command
+```
+composer install
+[or]
+php composer.phar install
+```
+
 Run the unit tests with the command:
 ```
 phpunit tests/StackTest.php
