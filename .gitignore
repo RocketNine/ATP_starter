@@ -6,6 +6,7 @@ out/
 
 #php
 .phpunit.result.cache
+vendor/
 
 #python
 *.pyc
