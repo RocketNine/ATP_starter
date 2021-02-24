@@ -6,7 +6,7 @@ namespace FizzBuzz
     public class FizzBuzzTest
     {
         [Test]
-        public void HowDoWeTestThisThing()
+        public void VerifyTestFrameworkRuns()
         {
             Assert.Fail("Hooray! A failing test means our system is working!");
         }
