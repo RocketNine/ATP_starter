@@ -5,7 +5,7 @@ from stack import Stack
 
 
 class StackTest(unittest.TestCase):
-    def test_how_do_we_test_this_thing(self):
+    def test_verify_test_framework_runs(self):
         self.fail("Hooray! A failing test means our tests are running!")
 
 
