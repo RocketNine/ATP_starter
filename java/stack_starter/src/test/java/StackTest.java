@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.fail;
 public class StackTest {
 
     @Test
-    public void HowDoWeTestThisThing() {
-        fail("Uh oh");
-   }
+    public void verifyTestFrameworkRuns() {
+        fail("A failing test confirms the test framework is running!");
+    }
 
 }
