@@ -9,14 +9,11 @@ public class SpaceportDepartureBoard {
 
     private ISpacelineLaunchInfoProvider provider;
     private List<LaunchInfo> launchList;
-    private boolean running;
 
     public SpaceportDepartureBoard(ISpacelineLaunchInfoProvider provider) {
         this.provider = provider;
         launchList = provider.getCurrentLaunches();
         sortLaunches();
-
-        running = true;
     }
 
     public List<LaunchInfo> getLaunchList() {
@@ -49,9 +46,11 @@ public class SpaceportDepartureBoard {
         Iterator<LaunchInfo> iter = launchList.iterator();
         while (iter.hasNext()) {
             LaunchInfo l = iter.next();
-            if (LaunchInfo.LaunchStatus.Launched == l.getStatus() &&
-                    l.getTime().plusMinutes(5).compareTo(now) < 0) {
-                iter.remove();
+            if (LaunchInfo.LaunchStatus.Launched == l.getStatus()) {
+                int answer = l.getTime().plusMinutes(5).compareTo(now);
+                if (answer <= 0) {
+                    iter.remove();
+                }
             } else if (LaunchInfo.LaunchStatus.Scrubbed == l.getStatus() &&
                     l.getTime().plusMinutes(10).compareTo(now) < 0) {
                 iter.remove();
@@ -71,9 +70,5 @@ public class SpaceportDepartureBoard {
         } else {
             addNewLaunch(launchInfo);
         }
-    }
-    
-    public void shutDown() {
-        running = false;
     }
 }

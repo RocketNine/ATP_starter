@@ -10,9 +10,8 @@ public class LaunchOrderListingTest {
     public void LaunchesAre_SortedByDestination_DestinationsAreUnique() {
         // Step 1. Create LaunchInfoProviderStub (that implements ISpacelineLaunchInfoProvider)
 
-        // Step 2 & 3. Create SUT - SpaceportDepartureBoard, using Constructor Injection
-
-        // Step 4. Exercise the SUT
+        // Step 2 & 3 & 4. Create SUT - SpaceportDepartureBoard, using Constructor Injection
+        // Exercising the this behavior happens during construction of the System Under Test
 
         // Step 5. Verify the results are sorted correctly
         Assertions.fail("TODO - test the info sorting behavior");
