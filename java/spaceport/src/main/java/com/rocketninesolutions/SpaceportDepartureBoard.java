@@ -23,23 +23,8 @@ public class SpaceportDepartureBoard {
         return Collections.unmodifiableList(launchList);
     }
 
-    public void onLaunchInfoChanged(LaunchInfo launchInfo) {
-        LaunchInfo.LaunchStatus status = launchInfo.getStatus();
-
-        if (status == LaunchInfo.LaunchStatus.Delayed) {
-            handleDelayedLaunch(launchInfo);
-        } else if (status == LaunchInfo.LaunchStatus.Scrubbed) {
-            handleScrubbedLaunch(launchInfo);
-        } else if (status == LaunchInfo.LaunchStatus.Launched) {
-            handleLaunched(launchInfo);
-        } else {
-            addNewLaunch(launchInfo);
-        }
-    }
-
     private void sortLaunches() {
-        // Skipped this to verify remove logic
-
+        throw new UnsupportedOperationException("TODO - implement the sorting logic!");
     }
 
     private void addNewLaunch(LaunchInfo launchInfo) {
@@ -74,6 +59,20 @@ public class SpaceportDepartureBoard {
         }
     }
 
+    public void onLaunchInfoChanged(LaunchInfo launchInfo) {
+        LaunchInfo.LaunchStatus status = launchInfo.getStatus();
+
+        if (status == LaunchInfo.LaunchStatus.Delayed) {
+            handleDelayedLaunch(launchInfo);
+        } else if (status == LaunchInfo.LaunchStatus.Scrubbed) {
+            handleScrubbedLaunch(launchInfo);
+        } else if (status == LaunchInfo.LaunchStatus.Launched) {
+            handleLaunched(launchInfo);
+        } else {
+            addNewLaunch(launchInfo);
+        }
+    }
+    
     public void shutDown() {
         running = false;
     }

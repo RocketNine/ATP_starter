@@ -3,7 +3,7 @@ package com.rocketninesolutions;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class SpaceportDepartureBoardTest {
+public class LaunchOrderListingTest {
 
     //TODO - Use the Stub Recipe to test that launches are sorted correctly
     @Test
