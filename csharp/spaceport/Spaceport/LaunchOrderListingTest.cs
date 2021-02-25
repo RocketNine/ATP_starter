@@ -3,7 +3,7 @@
 namespace SpacePort
 {
     [TestFixture]
-    public class SpaceportDepartureBoardTest
+    public class LaunchOrderListingTest
     {
         
         //TODO - Use the Stub Recipe to test that launches are sorted correctly
@@ -12,7 +12,8 @@ namespace SpacePort
         {
             // Step 1. Create LaunchInfoProviderStub (that implements ISpacelineLaunchInfoProvider)
 
-            // Step 2 & 3 & 4. Create SUT - SpaceportDepartureBoard, using Constructor Injection, Exercise the SUT
+            // Step 2 & 3 & 4. Create SUT - SpaceportDepartureBoard, using Constructor Injection,
+            // Exercising this behavior happens during construction of the System Under Test
 
             // Step 5. Verify the results are sorted correctly
             Assert.Fail("TODO - test the launch info sorting behavior");
