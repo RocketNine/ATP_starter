@@ -11,7 +11,7 @@ public class LaunchOrderListingTest {
         // Step 1. Create LaunchInfoProviderStub (that implements ISpacelineLaunchInfoProvider)
 
         // Step 2 & 3 & 4. Create SUT - SpaceportDepartureBoard, using Constructor Injection
-        // Exercising the this behavior happens during construction of the System Under Test
+        // Exercising this behavior happens during construction of the System Under Test
 
         // Step 5. Verify the results are sorted correctly
         Assertions.fail("TODO - test the info sorting behavior");
