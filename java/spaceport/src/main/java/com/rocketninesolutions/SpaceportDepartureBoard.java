@@ -7,11 +7,9 @@ import java.util.List;
 
 public class SpaceportDepartureBoard {
 
-    private ISpacelineLaunchInfoProvider provider;
     private List<LaunchInfo> launchList;
 
     public SpaceportDepartureBoard(ISpacelineLaunchInfoProvider provider) {
-        this.provider = provider;
         launchList = provider.getCurrentLaunches();
         sortLaunches();
     }
