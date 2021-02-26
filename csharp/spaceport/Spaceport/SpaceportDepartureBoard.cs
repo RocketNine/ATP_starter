@@ -17,24 +17,27 @@ namespace SpacePort
         }
 
         private void SortLaunches() {
-            throw new NotImplementedException("sorting logic hasn't been implemented yet");
+            //TODO - TEMP TO IMPLEMENT REMOVE TESTS
+            //throw new NotImplementedException("sorting logic hasn't been implemented yet");
         }
 
-        protected void removeInactiveLaunches()
+        public void RemoveInactiveLaunches()
         {
             DateTime now = DateTime.Now;
 
-            foreach (LaunchInfo launchInfo in LaunchList)
+            for (int i = LaunchList.Count - 1; i >= 0; i-- )
             {
+                LaunchInfo launchInfo = LaunchList[i];
                 if (launchInfo.Status == LaunchInfo.LaunchStatus.Launched)
                 {
                     if (launchInfo.Time.AddMinutes(5).CompareTo(now) <= 0) {
-                        LaunchList.Remove(launchInfo);
+                        LaunchList.RemoveAt(i);
                     }
                 } else if (launchInfo.Status == LaunchInfo.LaunchStatus.Scrubbed)
                 {
-                    if (launchInfo.Time.AddMinutes(10).CompareTo(now) <= 0) {
-                        LaunchList.Remove(launchInfo);
+                    if (launchInfo.Time.AddMinutes(10).CompareTo(now) <= 0)
+                    {
+                        LaunchList.RemoveAt(i);
                     }
                 }
             }

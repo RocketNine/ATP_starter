@@ -11,6 +11,13 @@ namespace SpacePort
             Scrubbed,
             Launched
         };
+
+        public LaunchInfo(Guid guid)
+        {
+            LaunchID = guid;
+        }
+        
+        private LaunchInfo() { }
         
         public Guid LaunchID { get; set; }
         public string Destination { get; set; }
