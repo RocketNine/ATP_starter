@@ -17,7 +17,7 @@ public class LaunchedFlightsTest {
     // TODO - introduce a mock for the clock to always test against a fixed time
 
     @Test
-    public void Launched_WellUnderWindowToRemove_Should_RemainInList() {
+    public void launched_WellUnderWindowToRemove_Should_RemainInList() {
         LocalDateTime fourMinutesAgo = LocalDateTime.now().minusMinutes(4);
         LaunchInfo li = createLaunchedInfoWithTime(fourMinutesAgo);
 
@@ -31,7 +31,7 @@ public class LaunchedFlightsTest {
     }
 
     @Test
-    public void Launched_OneSecondUnderWindowToRemove_Should_RemainInList() {
+    public void launched_OneSecondUnderWindowToRemove_Should_RemainInList() {
         LocalDateTime almostFiveMinutesAgo = LocalDateTime.now().minusMinutes(5).plusSeconds(1);
         LaunchInfo li = createLaunchedInfoWithTime(almostFiveMinutesAgo);
 
@@ -45,7 +45,7 @@ public class LaunchedFlightsTest {
     }
 
     @RepeatedTest(1000)
-    public void Launched_LessThanOneSecondUnderWindowToRemove_Should_RemainInList() {
+    public void launched_LessThanOneSecondUnderWindowToRemove_Should_RemainInList() {
         LocalDateTime almostFiveMinutesAgo = LocalDateTime.now().minusMinutes(5).plusNanos(50000);
         LaunchInfo li = createLaunchedInfoWithTime(almostFiveMinutesAgo);
 
@@ -59,7 +59,7 @@ public class LaunchedFlightsTest {
     }
 
     @Test
-    public void Launched_ExactlyFiveMinutesAgo_ShouldNot_RemainInList() {
+    public void launched_ExactlyFiveMinutesAgo_ShouldNot_RemainInList() {
         LocalDateTime exactlyFiveMinutesAgo = LocalDateTime.now().minusMinutes(5);
         LaunchInfo li = createLaunchedInfoWithTime(exactlyFiveMinutesAgo);
 
@@ -74,10 +74,10 @@ public class LaunchedFlightsTest {
 
 
 
-    private LaunchInfo createLaunchedInfoWithTime(LocalDateTime exactlyFiveMinutesAgo) {
+    private LaunchInfo createLaunchedInfoWithTime(LocalDateTime launchTime) {
         LaunchInfo li = new LaunchInfo(UUID.randomUUID());
         li.setStatus(LaunchInfo.LaunchStatus.Launched);
-        li.setTime(exactlyFiveMinutesAgo);
+        li.setTime(launchTime);
         return li;
     }
 
