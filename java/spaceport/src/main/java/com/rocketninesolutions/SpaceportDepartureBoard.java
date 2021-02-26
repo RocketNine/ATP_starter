@@ -47,13 +47,13 @@ public class SpaceportDepartureBoard {
         while (iter.hasNext()) {
             LaunchInfo l = iter.next();
             if (LaunchInfo.LaunchStatus.Launched == l.getStatus()) {
-                int answer = l.getTime().plusMinutes(5).compareTo(now);
-                if (answer <= 0) {
+                if (l.getTime().plusMinutes(5).compareTo(now) <= 0) {
                     iter.remove();
                 }
-            } else if (LaunchInfo.LaunchStatus.Scrubbed == l.getStatus() &&
-                    l.getTime().plusMinutes(10).compareTo(now) < 0) {
-                iter.remove();
+            } else if (LaunchInfo.LaunchStatus.Scrubbed == l.getStatus()) {
+                if (l.getTime().plusMinutes(10).compareTo(now) <= 0) {
+                    iter.remove();
+                }
             }
         }
     }
