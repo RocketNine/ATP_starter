@@ -5,20 +5,16 @@ namespace SpacePort
 {
     public class SpaceportDepartureBoard
     {
-        private readonly ISpacelineLaunchInfoProvider _provider;
-        
         public List<LaunchInfo> LaunchList { get; }
         
         public SpaceportDepartureBoard(ISpacelineLaunchInfoProvider provider)
         {
-            _provider  = provider;
-            LaunchList = _provider.GetCurrentLaunches();
+            LaunchList = provider.GetCurrentLaunches();
             SortLaunches();
         }
 
         private void SortLaunches() {
-            //TODO - TEMP TO IMPLEMENT REMOVE TESTS
-            //throw new NotImplementedException("sorting logic hasn't been implemented yet");
+            throw new NotImplementedException("sorting logic hasn't been implemented yet");
         }
 
         public void RemoveInactiveLaunches()

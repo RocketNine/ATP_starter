@@ -89,13 +89,7 @@ namespace SpacePort
                 this._launchList = new List<LaunchInfo>();
                 Thread.Sleep(10);   // causes enough delay to interfere with DateTime.Now 
             }
-
-            // TODO remove  the need for Subscribe in the Interface
-            public IDisposable Subscribe(IObserver<LaunchInfo> observer)
-            {
-                throw new NotImplementedException();
-            }
-
+            
             public List<LaunchInfo> GetCurrentLaunches()
             {
                 return _launchList;

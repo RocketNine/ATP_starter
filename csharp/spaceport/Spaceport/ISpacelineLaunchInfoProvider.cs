@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SpacePort
 {
-    public interface ISpacelineLaunchInfoProvider : IObservable<LaunchInfo>
+    public interface ISpacelineLaunchInfoProvider
     {
         List<LaunchInfo> GetCurrentLaunches();
     }
