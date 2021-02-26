@@ -17,7 +17,7 @@ namespace SpacePort
             throw new NotImplementedException("sorting logic hasn't been implemented yet");
         }
 
-        public void RemoveInactiveLaunches()
+        internal void RemoveInactiveLaunches()
         {
             DateTime now = DateTime.Now;
 
