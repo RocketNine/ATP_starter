@@ -52,5 +52,5 @@ php composer.phar install
 
 Run the unit tests with the command:
 ```
-phpunit tests/FizzBuzzTest.php
+phpunit tests/GildedRoseTest.php
 ```
