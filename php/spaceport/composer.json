@@ -1,0 +1,16 @@
+{
+    "name": "rocketnine/spaceport",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "authors": [
+        {
+            "name": "Paul Moore",
+            "email": "paul@rocketninesolutions.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    }
+}
