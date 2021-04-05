@@ -7,10 +7,6 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/emilybache/GildedRose-Refactoring-Kata.git"
-  },
   "keywords": [
     "kata",
     "refactor",
@@ -18,11 +14,7 @@
   ],
   "license": "MIT",
   "private": true,
-  "bugs": {
-    "url": "https://github.com/emilybache/GildedRose-Refactoring-Kata/issues"
-  },
-  "homepage": "https://github.com/emilybache/GildedRose-Refactoring-Kata",
-  "devDependencies": {
+"devDependencies": {
     "jest": "^24.9.0"
   }
 }
