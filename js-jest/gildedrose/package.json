@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "private": true,
-"devDependencies": {
+  "devDependencies": {
     "jest": "^24.9.0"
   }
 }
