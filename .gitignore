@@ -5,7 +5,7 @@ build/
 out/
 
 #javascript
-/node_modules/
+node_modules/
 
 #php
 .phpunit.result.cache
