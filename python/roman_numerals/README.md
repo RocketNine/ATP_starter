@@ -22,3 +22,12 @@ Examples:
 1990 -> "MCMXC"  (1000 -> "M"  + 900 -> "CM" + 90 -> "XC")
 2018 -> "MMXVIII" (2000 -> "MM" + 18 -> "XVIII")
 ```
+
+### Running Tests
+
+To run the tests
+
+```sh
+python3 -m unittest test_romannumerals.py
+```
+

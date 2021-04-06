@@ -13,3 +13,11 @@ Examples:
  4  →   "4"     |   9  →  "Fizz"  |  14  →  "14"
  5  →   "Buzz"  |  10  →  "Buzz"  |  15  →  "FizzBuzz"
 ```
+
+### Running Tests
+
+To run the tests
+
+```sh
+python3 -m unittest test_fizzbuzz.py
+```

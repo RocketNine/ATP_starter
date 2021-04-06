@@ -34,3 +34,12 @@ legendary item and as such its Quality is 80 and it never alters.
 ---
 
     Your task is document the **existing** behavior by writing characterization tests. Do not change any of the code!
+
+### Running Tests
+
+To run the tests
+
+```sh
+python3 -m unittest test_gilded_rose.py
+```
+

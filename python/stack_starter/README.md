@@ -10,3 +10,11 @@ The Stack supports the following operations:
 **Size** returns the number of elements.\
 **isEmpty** returns true when there are no elements in the stack.
 
+### Running Tests
+
+To run the tests
+
+```sh
+python3 -m unittest test_stack.py
+```
+
