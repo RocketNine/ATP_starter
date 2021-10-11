@@ -94,3 +94,5 @@ To generate test coverage report
 ```sh
 npm run test:coverage
 ```
+
+kata originally from https://exercism.org/
