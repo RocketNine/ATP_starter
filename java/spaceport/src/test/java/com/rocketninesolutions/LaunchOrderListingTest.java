@@ -14,6 +14,6 @@ public class LaunchOrderListingTest {
         // Exercising this behavior happens during construction of the System Under Test
 
         // Step 5. Verify the results are sorted correctly
-        Assertions.fail("TODO - test the info sorting behavior");
+        Assertions.fail("TODO - Write a test for the info sorting behavior (and then implement sorting behavior)");
     }
 }
