@@ -73,18 +73,11 @@ kata originally from https://exercism.org/
 
 ## Language Notes
 
-- PHP language level 7.1
-- PHPUnit 9.5.2
-
-Install project dependencies with the command
-```
-composer install
-[or]
-php composer.phar install
-```
+- PHP language level 8.3.10
+- PHPUnit 11.3.1
 
 
 Run the unit tests with the command:
 ```
-phpunit tests/FizzBuzzTest.php
+phpunit WordyTest.php
 ```
