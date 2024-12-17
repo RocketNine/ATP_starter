@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class LaunchedFlightsTest {
+class LaunchedFlightsTest {
 
     // These tests attempt to show Launched flights are removed from the departure board
     // Since the SpaceBoardDepartureBoard is using the current time, via LocalDateTime.now()
@@ -17,7 +17,7 @@ public class LaunchedFlightsTest {
     // TODO - introduce a mock for the clock to always test against a fixed time
 
     @Test
-    public void launched_WellUnderWindowToRemove_Should_RemainInList() {
+    void launched_WellUnderWindowToRemove_Should_RemainInList() {
         LocalDateTime fourMinutesAgo = LocalDateTime.now().minusMinutes(4);
         LaunchInfo li = createLaunchedInfoWithTime(fourMinutesAgo);
 
@@ -31,7 +31,7 @@ public class LaunchedFlightsTest {
     }
 
     @Test
-    public void launched_OneSecondUnderWindowToRemove_Should_RemainInList() {
+    void launched_OneSecondUnderWindowToRemove_Should_RemainInList() {
         LocalDateTime almostFiveMinutesAgo = LocalDateTime.now().minusMinutes(5).plusSeconds(1);
         LaunchInfo li = createLaunchedInfoWithTime(almostFiveMinutesAgo);
 
@@ -45,7 +45,7 @@ public class LaunchedFlightsTest {
     }
 
     @RepeatedTest(1000)
-    public void launched_LessThanOneSecondUnderWindowToRemove_Should_RemainInList() {
+    void launched_LessThanOneSecondUnderWindowToRemove_Should_RemainInList() {
         LocalDateTime almostFiveMinutesAgo = LocalDateTime.now().minusMinutes(5).plusNanos(50000);
         LaunchInfo li = createLaunchedInfoWithTime(almostFiveMinutesAgo);
 
@@ -59,7 +59,7 @@ public class LaunchedFlightsTest {
     }
 
     @Test
-    public void launched_ExactlyFiveMinutesAgo_ShouldNot_RemainInList() {
+    void launched_ExactlyFiveMinutesAgo_ShouldNot_RemainInList() {
         LocalDateTime exactlyFiveMinutesAgo = LocalDateTime.now().minusMinutes(5);
         LaunchInfo li = createLaunchedInfoWithTime(exactlyFiveMinutesAgo);
 
@@ -81,7 +81,7 @@ public class LaunchedFlightsTest {
         return li;
     }
 
-    class MockLaunchInfoProvider implements ISpacelineLaunchInfoProvider {
+     static class MockLaunchInfoProvider implements ISpacelineLaunchInfoProvider {
 
         List<LaunchInfo> launchList;
 

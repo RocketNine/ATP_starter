@@ -3,11 +3,11 @@ package com.rocketninesolutions;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class LaunchOrderListingTest {
+class LaunchOrderListingTest {
 
     //TODO - Use the Stub Recipe to test that launches are sorted correctly
     @Test
-    public void LaunchesAre_SortedByDestination_DestinationsAreUnique() {
+    void LaunchesAre_SortedByDestination_DestinationsAreUnique() {
         // Step 1. Create LaunchInfoProviderStub (that implements ISpacelineLaunchInfoProvider)
 
         // Step 2 & 3 & 4. Create SUT - SpaceportDepartureBoard, using Constructor Injection
