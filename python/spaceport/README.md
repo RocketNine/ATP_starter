@@ -2,11 +2,11 @@
 
 2024-12-17 punch list
 
--[ ] LaunchInfo content at bottom of readme
+-[x] LaunchInfo content at bottom of readme
 -[x] Recipe inside test
 - [ ] Confirm recipe language makes sense for python - it's copied from Java with "Interface"
 - [x] interface for space line launch info provider
-- [ ] barebones departure board impl
+- [x] barebones departure board impl
 - [ ] commit to /R9 github repo
 - [ ] add to acsd instance python breakout_1 and _2 repos
 - [ ] remind python group to grab latest code on Wed morning
@@ -27,16 +27,18 @@ Occasionally launches are scrubbed. The Departures Board is notified of the new 
 
 **TODO:** Removal of launches from the Departures Board happens in the RemoveInactiveLaunchess method. Launches that are Launched or Scrubbed but within their active window will remain part of the Departures Board list. Once past the active window they are removed from the Departures Board list. You will need to introduce a Test Double for the clock!
 
-    public class LaunchInfo {
+    @dataclass
+    class LaunchInfo:
 
-        private UUID launchID;
-        private String destination;
-        private String flightNumber;
-        private LocalDateTime time;
-        private String launchPad;
-        private LaunchStatus status;
+        launch_id: uuid
+        destination: str
+        flight_number: str
+        launch_time: datetime
+        launchPad: str
+        status: LaunchStatus
 
-        public enum LaunchStatus {
-            Aok, Delayed, Scrubbed, Launched
-        };
-    }
+        class LaunchStatus(Enum):
+            AOK = 1
+            DELAYED = 2
+            SCRUBBED = 3
+            LAUNCHED = 4
