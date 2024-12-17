@@ -3,8 +3,9 @@
 2024-12-17 punch list
 
 -[ ] LaunchInfo content at bottom of readme
--[ ] Recipe inside test
-- [ ] interface for space line launch info provider
+-[x] Recipe inside test
+- [ ] Confirm recipe language makes sense for python - it's copied from Java with "Interface"
+- [x] interface for space line launch info provider
 - [ ] barebones departure board impl
 - [ ] commit to /R9 github repo
 - [ ] add to acsd instance python breakout_1 and _2 repos
