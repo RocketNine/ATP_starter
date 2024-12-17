@@ -7,10 +7,10 @@
 - [x] Confirm recipe language makes sense for python - it's copied from Java with "Interface"
 - [x] interface for space line launch info provider
 - [x] barebones departure board impl
+- [ ] Try solving exercise using commited code
 - [ ] commit to /R9 github repo
 - [ ] add to acsd instance python breakout_1 and _2 repos
 - [ ] remind python group to grab latest code on Wed morning
-- [ ] Try solving exercise using commited code
 
 Rocket 9 needs your team to finish up the code for our Spaceport Departures Board. Like a departures board at an airport the Spaceport Departures Board lists launch times of all spacecraft venturing to outer space. Our former team of contract Elbonian programmers left some code that you can build on (or scrap in favor of something more maintainable).
 
