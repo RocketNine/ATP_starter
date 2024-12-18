@@ -18,3 +18,7 @@ class LaunchInfo:
     launchPad: str
     status: LaunchStatus
 
+    def __init__(self, launchid, destination):
+        self.launch_id = launchid
+        self.destination = destination
+

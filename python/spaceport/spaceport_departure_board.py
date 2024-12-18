@@ -1,6 +1,6 @@
 class SpaceportDepartureBoard():
-    def __init__(self, SpacelineLaunchInfoProvider):
-        self.launch_list = SpacelineLaunchInfoProvider.get_launch_list()
+    def __init__(self, launch_info_provider):
+        self.launch_list = launch_info_provider.get_current_launches()
         self.sort_launches(self)
 
     def get_launch_list(self):
