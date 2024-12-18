@@ -9,5 +9,3 @@ class SpaceportDepartureBoard():
     def sort_launches(self):
         # TODO - implement the sorting logic!
         pass
-
-

@@ -21,4 +21,3 @@ class LaunchInfo:
     def __init__(self, launchid, destination):
         self.launch_id = launchid
         self.destination = destination
-
