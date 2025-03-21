@@ -1,106 +1,106 @@
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import org.junit.Ignore;
-import org.junit.Test;
-
-public class WordProblemSolverTest {
+class WordProblemSolverTest {
 
     WordProblemSolver solver = new WordProblemSolver();
 
     @Test
-    public void testJustANumber() {
+    void testJustANumber() {
         assertEquals(5, solver.solve("What is 5?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testSingleAddition1() {
+    void testSingleAddition1() {
         assertEquals(2, solver.solve("What is 1 plus 1?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testSingleAddition2() {
+    void testSingleAddition2() {
         assertEquals(55, solver.solve("What is 53 plus 2?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testSingleAdditionWithNegativeNumbers() {
+    void testSingleAdditionWithNegativeNumbers() {
         assertEquals(-11, solver.solve("What is -1 plus -10?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testSingleAdditionOfLargeNumbers() {
+    void testSingleAdditionOfLargeNumbers() {
         assertEquals(45801, solver.solve("What is 123 plus 45678?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testSingleSubtraction() {
+    void testSingleSubtraction() {
         assertEquals(16, solver.solve("What is 4 minus -12?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testSingleMultiplication() {
+    void testSingleMultiplication() {
         assertEquals(-75, solver.solve("What is -3 multiplied by 25?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testSingleDivision() {
+    void testSingleDivision() {
         assertEquals(-11, solver.solve("What is 33 divided by -3?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testMultipleAdditions() {
+    void testMultipleAdditions() {
         assertEquals(3, solver.solve("What is 1 plus 1 plus 1?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testAdditionThenSubtraction() {
+    void testAdditionThenSubtraction() {
         assertEquals(8, solver.solve("What is 1 plus 5 minus -2?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testMultipleSubtractions() {
+    void testMultipleSubtractions() {
         assertEquals(3, solver.solve("What is 20 minus 4 minus 13?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testSubtractionThenAddition() {
+    void testSubtractionThenAddition() {
         assertEquals(14, solver.solve("What is 17 minus 6 plus 3?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testMultipleMultiplications() {
+    void testMultipleMultiplications() {
         assertEquals(-12, solver.solve("What is 2 multiplied by -2 multiplied by 3?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testAdditionThenMultiplication() {
+    void testAdditionThenMultiplication() {
         assertEquals(-8, solver.solve("What is -3 plus 7 multiplied by -2?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testMultipleDivisions() {
+    void testMultipleDivisions() {
         assertEquals(2, solver.solve("What is -12 divided by 2 divided by -3?"));
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testUnknownOperation() {
+    void testUnknownOperation() {
         IllegalArgumentException expected =
             assertThrows(
                 IllegalArgumentException.class,
@@ -110,9 +110,9 @@ public class WordProblemSolverTest {
             .hasMessage("I'm sorry, I don't understand the question!");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testNonMathQuestion() {
+    void testNonMathQuestion() {
         // See https://en.wikipedia.org/wiki/President_of_the_United_States if you really need to know!
         IllegalArgumentException expected =
             assertThrows(
@@ -123,9 +123,9 @@ public class WordProblemSolverTest {
             .hasMessage("I'm sorry, I don't understand the question!");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testMissingAnOperand() {
+    void testMissingAnOperand() {
         IllegalArgumentException expected =
             assertThrows(
                 IllegalArgumentException.class,
@@ -135,9 +135,9 @@ public class WordProblemSolverTest {
             .hasMessage("I'm sorry, I don't understand the question!");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testNoOperandsOrOperators() {
+    void testNoOperandsOrOperators() {
         IllegalArgumentException expected =
             assertThrows(
                 IllegalArgumentException.class,
@@ -147,9 +147,9 @@ public class WordProblemSolverTest {
             .hasMessage("I'm sorry, I don't understand the question!");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testTwoOperationsInARow() {
+    void testTwoOperationsInARow() {
         IllegalArgumentException expected =
             assertThrows(
                 IllegalArgumentException.class,
@@ -159,9 +159,9 @@ public class WordProblemSolverTest {
             .hasMessage("I'm sorry, I don't understand the question!");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testTwoNumbersAfterOperation() {
+    void testTwoNumbersAfterOperation() {
         IllegalArgumentException expected =
             assertThrows(
                 IllegalArgumentException.class,
@@ -171,9 +171,9 @@ public class WordProblemSolverTest {
             .hasMessage("I'm sorry, I don't understand the question!");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testPostfixNotation() {
+    void testPostfixNotation() {
         IllegalArgumentException expected =
             assertThrows(
                 IllegalArgumentException.class,
@@ -183,9 +183,9 @@ public class WordProblemSolverTest {
             .hasMessage("I'm sorry, I don't understand the question!");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
-    public void testPrefixNotation() {
+    void testPrefixNotation() {
         IllegalArgumentException expected =
             assertThrows(
                 IllegalArgumentException.class,
