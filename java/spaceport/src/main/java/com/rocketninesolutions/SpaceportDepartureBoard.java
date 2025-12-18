@@ -1,6 +1,7 @@
 package com.rocketninesolutions;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
@@ -10,7 +11,7 @@ public class SpaceportDepartureBoard {
     private List<LaunchInfo> launchList;
 
     public SpaceportDepartureBoard(ISpacelineLaunchInfoProvider provider) {
-        launchList = provider.getCurrentLaunches();
+        launchList = new ArrayList(provider.getCurrentLaunches());
         sortLaunches();
     }
 
